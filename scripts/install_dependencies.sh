@@ -5,4 +5,5 @@ ls
 # follow this tutorial : https://plainenglish.io/community/how-to-install-python-3-11-with-pip-on-amazon-linux-2023-9ab2ed
 
 cd /opt/app
+ls
 python3.11 -m pip install -r requirements.txt
