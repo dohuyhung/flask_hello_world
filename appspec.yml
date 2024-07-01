@@ -1,0 +1,14 @@
+version: 1.0
+os: linux
+files:
+  - source: /
+    destination: /opt/app
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/start_flask.sh
+      timeout: 300
+      runas: root
