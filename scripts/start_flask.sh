@@ -1,4 +1,4 @@
 #!/bin/bash
 ls
-# cd ../flask
-# flask --app hello run
+cd /opt/app/flask
+flask --app hello run

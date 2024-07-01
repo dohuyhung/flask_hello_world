@@ -1,5 +1,4 @@
 #!/bin/bash
 ls
-echo "$DEPLOYMENT_GROUP_ID/$DEPLOYMENT_ID/deployment-archive/"
-cd ../flask
+cd /opt/app/flask
 pip install -r requirements.txt
