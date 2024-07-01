@@ -1,4 +1,4 @@
 #!/bin/bash
 ls
 cd /opt/app/flask
-flask --app hello run
+gunicorn -b 0.0.0.0 'hello:app' --daemon
