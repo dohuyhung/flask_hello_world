@@ -4,16 +4,17 @@ files:
   - source: /flask
     destination: /opt/app
   - source: /nginx-conf/hello.conf
-    destination: /etc/nginx/conf.d/ #please change tmp to your nginx conf path
+    destination: /etc/nginx/conf.d/ # Or you can change to tmp folder, then copy to /etc/nginx/conf.d folder
 file_exists_behavior: OVERWRITE
 hooks:
-  AfterInstall:
+  install:
     - location: scripts/setup_nginx.sh
       timeout: 300
       runas: root
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
+  AfterInstall:
     - location: scripts/start_flask.sh
       timeout: 300
       runas: root
