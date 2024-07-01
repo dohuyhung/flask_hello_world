@@ -3,12 +3,16 @@ os: linux
 files:
   - source: /
     destination: /opt/app
+file_exists_behavior: OVERWRITE
 hooks:
-  BeforeInstall:
+  # BeforeInstall:
+  #   - location: scripts/install_dependencies.sh
+  #     timeout: 300
+  #     runas: root
+  AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
-  AfterInstall:
     - location: scripts/start_flask.sh
       timeout: 300
       runas: root
