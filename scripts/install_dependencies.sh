@@ -4,6 +4,6 @@ ls
 # dnf install python3.11 -y
 # follow this tutorial : https://plainenglish.io/community/how-to-install-python-3-11-with-pip-on-amazon-linux-2023-9ab2ed
 
-cd /opt/app
+cd /opt/app/flask
 ls
 python3.11 -m pip install -r requirements.txt
